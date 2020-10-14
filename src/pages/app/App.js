@@ -33,6 +33,17 @@ handleAddCar = async newCrData => {
   () => this.props.history.push('/'));
  }
 
+ handleDeleteCar = async id => {
+  await carAPI.deleteOne(id);
+  this.setState(
+    state => ({
+      // Yay, filter returns a NEW array
+      cars: state.cars.filter(p => p._id !== id),
+    }),
+    () => this.props.history.push("/")
+  );
+};
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -78,6 +89,7 @@ handleAddCar = async newCrData => {
           exact 
           path='/' 
           render={() => <CarListPage cars={this.state.cars}
+          handleDeleteCar={this.handleDeleteCar}
             />
           } />
       <Route 
