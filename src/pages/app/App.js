@@ -10,6 +10,7 @@ import * as carAPI from "../../services/cars-api";
 import CarListPage from "../../components/CarListPage/CarListPage";
 import AddCarPage from "../../components/AddCarPage/AddCarPage";
 import CarDetailPage from "../../components/CarDetailPage/CarDetailPage";
+import EditCarPage from "../../components/EditCarPage/EditCarPage";
 
 class App extends Component {
   constructor() {
@@ -40,6 +41,19 @@ handleAddCar = async newCrData => {
       // Yay, filter returns a NEW array
       cars: state.cars.filter(p => p._id !== id),
     }),
+    () => this.props.history.push("/")
+  );
+};
+
+handleUpdateCar = async updatedCrData => {
+  const updatedCar = await carAPI.update(updatedCrData);
+  // Using map to replace just the puppy that was updated
+  const newCarsArray = this.state.cars.map(p =>
+    p._id === updatedCar._id ? updatedCar : p
+  );
+  this.setState(
+    { cars: newCarsArray },
+    // This cb function runs after state is updated
     () => this.props.history.push("/")
   );
 };
@@ -103,6 +117,16 @@ handleAddCar = async newCrData => {
       path='/details' 
       render={({location}) => <CarDetailPage location={location}/>
        } />
+       <Route
+            exact
+            path="/edit"
+            render={({ location }) => (
+              <EditCarPage
+                handleUpdateCar={this.handleUpdateCar}
+                location={location}
+              />
+            )}
+            />
       </main>
       </Switch>
       </div>

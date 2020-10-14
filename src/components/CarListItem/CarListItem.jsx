@@ -19,6 +19,21 @@ function CarListItem(props) {
         >
         DETAILS
        </Link>
+       <Link
+      className='btn btn-xs btn-warning'
+      to={{
+      pathname: '/edit',
+      state: {car: props.car}
+      }}
+       >
+      EDIT
+      </Link>
+      <button
+        className="btn btn-xs btn-danger margin-left-10"
+        onClick={() => props.handleDeleteCar(props.car._id)}
+       >
+        DELETE
+        </button>
       </div>
     </div>
   );
