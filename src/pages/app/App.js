@@ -5,9 +5,11 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
-import MainPage from '../MainPage/MainPage';
+// import MainPage from '../MainPage/MainPage';
 import * as carAPI from "../../services/cars-api";
 import CarListPage from "../../components/CarListPage/CarListPage";
+import AddCarPage from "../../components/AddCarPage/AddCarPage";
+import CarDetailPage from "../../components/CarDetailPage/CarDetailPage";
 
 class App extends Component {
   constructor() {
@@ -22,6 +24,14 @@ async componentDidMount() {
   const cars = await carAPI.getAll();
   this.setState({ cars });
 }
+
+handleAddCar = async newCrData => {
+  const newCr = await carAPI.create(newCrData);
+  this.setState(state => ({
+    cars: [...state.cars, newCr]
+  }),
+  () => this.props.history.push('/'));
+ }
 
   handleLogout = () => {
     userService.logout();
@@ -39,14 +49,18 @@ async componentDidMount() {
           CAR RENT
       <nav>
       <NavLink exact to="/">
-              CARS LIST
-            </NavLink>
+        CARS LIST
+      </NavLink>
+      <NavLink exact to="/add">
+        ADD CAR
+      </NavLink>
       <NavBar user={this.state.user}
         handleLogout={this.handleLogout}
          />
-    </nav></header>
+      </nav>
+      </header>
+
       <Switch>
-      
       <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
@@ -59,7 +73,6 @@ async componentDidMount() {
               history={history}
             />
            }/>
-
         <main>
           <Route 
           exact 
@@ -67,9 +80,19 @@ async componentDidMount() {
           render={() => <CarListPage cars={this.state.cars}
             />
           } />
-        </main>
-
-       </Switch>
+      <Route 
+      exact 
+      path='/add' 
+      render={() => <AddCarPage handleAddCar={this.handleAddCar}
+      />
+      } />
+      <Route 
+      exact 
+      path='/details' 
+      render={({location}) => <CarDetailPage location={location}/>
+       } />
+      </main>
+      </Switch>
       </div>
     );
   }
