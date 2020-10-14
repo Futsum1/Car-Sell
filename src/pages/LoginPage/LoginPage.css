@@ -1,19 +1,19 @@
-.LoginPage {
+/* .LoginPage {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-  }
+  } */
 
   
-  /* .LoginPage {
+  .LoginPage {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-      } */
+      }
 
      
