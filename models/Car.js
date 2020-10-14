@@ -1,11 +1,14 @@
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
-// var carSchema = new Schema({
-//   model: {type: String, required: true},
-//   breed: {type: String, default: 'Mixed'},
-//   odometer: {type: Number, default: 0},
-//   odometer: {type: Number, default: 0}
-// },{
-//   timestamps: true
-// });
-// module.exports = mongoose.model('Car', carSchema);
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var carSchema = new Schema({
+  carMake: {type: String },
+  carModel: {type: String },
+  color: {type: String },
+  year: {type: Number},
+  odometer: {type: Number, default: 00000}
+},{
+  timestamps: true
+});
+
+module.exports = mongoose.model('Car', carSchema);
