@@ -6,7 +6,8 @@ var carSchema = new Schema({
   carModel: {type: String },
   color: {type: String },
   year: {type: Number},
-  odometer: {type: Number, default: 00000}
+  odometer: {type: Number, default: 00000},
+  picture: {type: String} 
 },{
   timestamps: true
 });

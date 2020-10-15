@@ -32,7 +32,7 @@ class AddCarPage extends Component {
  render() {
    return (
      <>
-       <h1>Add Car</h1>
+       <h3>Add Car</h3>
        <form 
        ref={this.formRef} 
        autoComplete="off" 
@@ -76,6 +76,8 @@ class AddCarPage extends Component {
              onChange={this.handleChange}
            />
          </div>
+
+
          <div className="form-group">
            <label> Car Odometer </label>
            <input
@@ -90,7 +92,7 @@ class AddCarPage extends Component {
            className="btn"
            disabled={this.state.invalidForm}
          >
-           ADD CAR
+         ADD CAR
          </button>
        </form>
      </>

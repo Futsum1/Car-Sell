@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function PuppyCard({car}) { 
+function CarCard({car}) { 
   return (
     <div className='panel panel-default'>
       <div className="panel-heading">
@@ -14,7 +14,7 @@ function PuppyCard({car}) {
           <dt>Car Model</dt>
           <dd>{car.carModel}</dd>
           <dt>Car Color</dt>
-          <dd>{car.carColor}</dd>
+          <dd>{car.color}</dd>
           <dt>CarYear</dt>
           <dd>{car.year}</dd>
           <dt>Car Odometere</dt>
@@ -22,9 +22,9 @@ function PuppyCard({car}) {
         </dl>
       </div>
       <div className='panel-footer'>
-        <Link to='/'>RETURN TO LIST</Link>
+        <Link to='/'>Return To List</Link>
       </div>
     </div>
   );
 }
-export default PuppyCard;
+export default CarCard;

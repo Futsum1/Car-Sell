@@ -28,31 +28,49 @@ class EditCarPage extends Component {
        <h1>Edit Car</h1>
        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
          <div className="form-group">
-           <label>Car's Name (required)</label>
+           <label>Car Make (required)</label>
            <input
              className="form-control"
-             name="name"
-             value={this.state.formData.name}
+             name="carMake"
+             value={this.state.formData.carMake}
              onChange={this.handleChange}
              required
            />
          </div>
          <div className="form-group">
-           <label>Pup's Breed (required)</label>
+           <label>Car Model (required)</label>
            <input
              className="form-control"
-             name="breed"
-             value={this.state.formData.breed}
+             name="carModel"
+             value={this.state.formData.carModel}
              onChange={this.handleChange}
              required
            />
          </div>
          <div className="form-group">
-           <label>Pup's Age</label>
+           <label>Car Color</label>
            <input
              className="form-control"
-             name="age"
-             value={this.state.formData.age}
+             name="color"
+             value={this.state.formData.color}
+             onChange={this.handleChange}
+           />
+         </div>
+         <div className="form-group">
+           <label> Car Year </label>
+           <input
+             className="form-control"
+             name="year"
+             value={this.state.formData.year}
+             onChange={this.handleChange}
+           />
+         </div>
+         <div className="form-group">
+           <label> Car Odometer </label>
+           <input
+             className="form-control"
+             name="odometer"
+             value={this.state.formData.odometer}
              onChange={this.handleChange}
            />
          </div>
@@ -61,7 +79,7 @@ class EditCarPage extends Component {
            className="btn btn-xs"
            disabled={this.state.invalidForm}
          >
-           SAVE PUPPY
+           Save Car
          </button>&nbsp;&nbsp;
          <Link to='/'>CANCEL</Link>
        </form>

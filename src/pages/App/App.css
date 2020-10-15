@@ -26,3 +26,31 @@
   color: var(--secondary-dark);
   margin-bottom: 65vmin;
 }
+
+
+
+/* .form-group{
+ color: lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+} */
+
+.panel-body{
+  color: lightblue;
+}
+panel-footer{
+  color: lightblue;
+}
+/* .form-control{
+  color: lightblue;
+} */
+/* .panel panel-default{
+  color: lightblue;
+} */
+panel panel-default{
+  color: lightblue;
+  padding-block-end: 240px;
+} 
+

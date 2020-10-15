@@ -13,7 +13,6 @@ const  rentSchema = new Schema({
   car_id: {type: Schema.Types.ObjectId, ref: 'Car'},
   rent_id: {type: String},
   reviews: [reviewSchema],
-  price: {type: Number},
   
 });
 

@@ -1,5 +1,5 @@
 const Rent = require('../models/rent');
-const { render } = require('../server');
+// const { render } = require('../server');
 
 module.exports = {
   index,
@@ -22,7 +22,7 @@ const BOOK = {
 
 function deleteOrder(req, res) {
    Rent.findByIdAndDelete(req.params.id, function(err) {
-   res.redirect('/orders');
+   res.redirect('/rents');
   });
 }
 
@@ -48,8 +48,7 @@ function create(req, res) {
   const rent = new Rent({
     car: req.body.car,
     price: BOOK[req.body.car],
-    // tip: req.body.tip,
-    // quantity: req.body.quantity
+    
   });
   rent.user = req.user._id;
   
