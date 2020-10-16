@@ -9,7 +9,9 @@ class AddCarPage extends Component {
      carModel: '',
      color: '',
      year: '0000',
-     odometer: ''
+     odometer: '',
+     photo: '',
+     user: this.props.user._id
    }
  };
 

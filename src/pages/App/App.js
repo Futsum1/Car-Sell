@@ -16,13 +16,13 @@ class App extends Component {
     super();
     this.state = {
     user: userService.getUser(),
-    cars: [],
+    cars: [], 
   };
 }
 
-async componentDidMount() {
-  const cars = await carAPI.getAll();
-  this.setState({ cars });
+async getUserCars() {
+  const cars = await carAPI.getAllUserCars(this.state.user._id);
+  this.setState({cars});
 }
 
 handleAddCar = async newCrData => {
@@ -46,7 +46,7 @@ handleAddCar = async newCrData => {
 
 handleUpdateCar = async updatedCrData => {
   const updatedCar = await carAPI.update(updatedCrData);
-  // Using map to replace just the puppy that was updated
+  // Using map to replace just the car that was updated
   const newCarsArray = this.state.cars.map(p =>
     p._id === updatedCar._id ? updatedCar : p
   );
@@ -59,12 +59,12 @@ handleUpdateCar = async updatedCrData => {
 
   handleLogout = () => {
     userService.logout();
-    this.setState({ user: null });
+    this.setState({ user: null, cars:[] });
   }
 
   handleSignupOrLogin = () => {
-    this.setState({ user: userService.getUser() });
-  }
+    this.setState({ user: userService.getUser() }, () => this.getUserCars());
+ };
 
   render() {
     return (
@@ -78,7 +78,6 @@ handleUpdateCar = async updatedCrData => {
          />
       </nav>
       </header>
-
       <Switch>
       <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -103,7 +102,9 @@ handleUpdateCar = async updatedCrData => {
       <Route 
       exact 
       path='/add' 
-      render={() => <AddCarPage handleAddCar={this.handleAddCar}
+      render={() => <AddCarPage 
+      user={this.state.user}
+      handleAddCar={this.handleAddCar}
       />
       } />
       <Route 

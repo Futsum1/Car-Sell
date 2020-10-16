@@ -18,7 +18,7 @@ app.use(require('./config/auth'));
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/cars', carsRouter);
-app.use('/api/cars', carsRouter);
+
 
 // Mount the auth middleware that processes JWTs
 

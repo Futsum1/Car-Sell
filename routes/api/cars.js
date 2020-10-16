@@ -9,5 +9,6 @@ router.get('/:id', carsCtrl.show);
 router.post('/', carsCtrl.create);
 router.delete('/:id',  carsCtrl.delete);
 router.put('/:id', carsCtrl.update);
+router.get('/users/:id' , carsCtrl.usercars)
 
 module.exports = router;

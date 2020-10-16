@@ -5,8 +5,15 @@ module.exports = {
   show,
   create,
   delete: deleteOne,
-  update
+  update,
+  usercars
 };
+
+async function usercars(req, res) {
+  console.log('text',req.params.id);
+  const cars = await Car.find({ 'user': req.params.id})
+  res.status(200).json(cars);
+}
 
 async function index(req, res) {
   const Cars = await Car.find({});
