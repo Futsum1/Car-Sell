@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import NavBar from '../../components/NavBar/NavBar';
-// import MainPage from '../MainPage/MainPage';
 import * as carAPI from "../../services/cars-api";
 import CarListPage from "../../components/CarListPage/CarListPage";
 import AddCarPage from "../../components/AddCarPage/AddCarPage";
@@ -73,12 +72,7 @@ handleUpdateCar = async updatedCrData => {
         <header className="App-header">
           CAR RENT
       <nav>
-      <NavLink exact to="/">
-        CARS LIST
-      </NavLink>
-      <NavLink exact to="/add">
-        ADD CAR
-      </NavLink>
+  
       <NavBar user={this.state.user}
         handleLogout={this.handleLogout}
          />

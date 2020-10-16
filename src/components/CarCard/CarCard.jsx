@@ -19,6 +19,7 @@ function CarCard({car}) {
           <dd>{car.year}</dd>
           <dt>Car Odometere</dt>
           <dd>{car.odometer}</dd>
+          {car.photo && <img alt="car" src={car.photo}/>}
         </dl>
       </div>
       <div className='panel-footer'>

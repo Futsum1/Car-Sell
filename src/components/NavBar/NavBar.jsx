@@ -3,9 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = (props) => {
-  let nav = props.user ?
+  let navs = props.user ?
     <div>
-      <Link to='/car-rent' className='NavBar-link'>CAR-RENT</Link>
+      <Link to='/'>Car List</Link>
+      <NavLink exact to="/add">ADD CAR</NavLink>
+      
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='' onClick={props.handleLogout} className='NavBar-link'>LOG OUT</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -20,9 +22,9 @@ const NavBar = (props) => {
 
   return (
     <div className='NavBar'>
-      {nav}
-      <NavLink exact to='/'>HOME&nbsp;</NavLink>
-    <NavLink exact to='/details'>DETAILS </NavLink>
+      {navs}
+      
+  
     </div>
   );
 };

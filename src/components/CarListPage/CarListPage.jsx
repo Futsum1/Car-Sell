@@ -5,7 +5,7 @@ import CarListItem from "../CarListItem/CarListItem";
 function CarListPage(props) {
   return (
     <>
-      <h1> Rent Car List</h1>
+      {/* <h1> Rent Car List</h1> */}
       <div className="CarListPage-grid">
         {props.cars.map(car => (
          <CarListItem 

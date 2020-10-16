@@ -7,8 +7,9 @@ function CarListItem(props) {
   return (
     <div className='panel panel-default'>
       <div className="panel-heading">
-      {/* <img src="https://t3.ftcdn.net/jpg/03/64/81/50/240_F_364815013_RPvMWCJhPDRI8zfptrf3nMTe1O4iYvSq.jpg" class="card-img-top" alt="..."/> */}
       
+     {props.car.photo && <img alt="car" src={props.car.photo} ></img>}
+
         <h3 className='panel-title'>{props.car.carMake}</h3>
         <h3 className='panel-title'>{props.car.carModel}</h3>
       </div>

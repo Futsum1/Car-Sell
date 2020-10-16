@@ -74,6 +74,16 @@ class EditCarPage extends Component {
              onChange={this.handleChange}
            />
          </div>
+         <div className="form-group">
+           <label> photo </label>
+           <input
+             className="form-control"
+             name="photo"
+             value={this.state.formData.photo}
+             onChange={this.handleChange}
+           />
+         </div>
+
          <button
            type="submit"
            className="btn btn-xs"

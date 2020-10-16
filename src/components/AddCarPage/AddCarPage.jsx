@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link } from 'react-router-dom';
 
 class AddCarPage extends Component {
  state = {
@@ -77,7 +78,6 @@ class AddCarPage extends Component {
            />
          </div>
 
-
          <div className="form-group">
            <label> Car Odometer </label>
            <input
@@ -87,13 +87,23 @@ class AddCarPage extends Component {
              onChange={this.handleChange}
            />
          </div>
+         <div className="form-group">
+           <label> photo </label>
+           <input
+             className="form-control"
+             name="photo"
+             value={this.state.formData.photo}
+             onChange={this.handleChange}
+           />
+         </div>
          <button
            type="submit"
            className="btn"
            disabled={this.state.invalidForm}
          >
-         ADD CAR
+         Add Car
          </button>
+         <Link to='/'>CANCEL</Link>
        </form>
      </>
    );
