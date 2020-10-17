@@ -13,10 +13,11 @@
 }
 
 .NavBar-welcome {
-  color: blue;
+  color:rgb(185, 25, 25);
 
 }
 .App-header{
-  color: lightblue;
+  color: rgb(70, 109, 122);
   margin-top: 0px;
+  background-color: rgb(202, 202, 222);
 }
