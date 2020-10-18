@@ -1,4 +1,14 @@
+import tokenService from '../utils/tokenService';
 const BASE_URL = '/api/cars';
+
+export function getAllCars(){
+  return fetch(BASE_URL, {
+    headers: {
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    }
+  }, {mode: 'cors'})
+  .then(res => res.json());
+}
 
 export function getAllUserCars(id) {
   return fetch(`${BASE_URL}/users/${id}`) 

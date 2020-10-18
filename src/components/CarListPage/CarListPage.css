@@ -3,6 +3,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     grid-gap: 40px;
-    background-color: rgb(76, 4, 24);
+    background: url('https://wallpaperaccess.com/full/110804.jpg')
   }
   

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function CarCard({car}) { 
+function SuccessPage({location}) {
+  const car  = location.state.car
   return (
+    <>
+    <h1>Congratulation!</h1>
     <div className='panel panel-default'>
-      <div className="panel-heading">
-        <h3 className='panel-title'>{car.carMake}</h3>
-      </div>
       <div className='panel-body'>
         <dl>
           <dt>Car Make</dt>
@@ -23,10 +23,10 @@ function CarCard({car}) {
         </dl>
       </div>
       <div className='panel-footer'>
-        <Link to={{pathname: '/checkout', state: {car: car}}}>Buy this car</Link>
         <Link to='/'>Return To List</Link>
       </div>
     </div>
+    </>
   );
 }
-export default CarCard;
+export default SuccessPage;

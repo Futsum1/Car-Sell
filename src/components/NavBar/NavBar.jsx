@@ -6,7 +6,8 @@ const NavBar = (props) => {
   let navs = props.user ?
     <div>
       <Link to='/'>Car List</Link>
-      <NavLink exact to="/add">ADD CAR</NavLink>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      {props.user.isAdmin && <NavLink exact to="/add">Add Car</NavLink>}
       
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='' onClick={props.handleLogout} className='NavBar-link'>LOG OUT</Link>

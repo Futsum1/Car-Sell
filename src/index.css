@@ -46,3 +46,15 @@ dl {
 .margin-left-10 {
   margin-left: 10px;
 }
+
+.form-group{
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-control{
+   color: red;
+}

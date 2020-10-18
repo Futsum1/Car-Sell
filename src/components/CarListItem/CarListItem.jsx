@@ -23,7 +23,7 @@ function CarListItem(props) {
         >
         DETAILS
        </Link>
-       <Link
+      <Link
       className='btn btn-xs btn-warning'
       to={{
       pathname: '/edit',
