@@ -39,11 +39,15 @@ main{
   border-image-repeat: 4px;
   font-size: 15px;
   display: flex;
-    /* flex-flow: column nowrap; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin-bottom: 50px; */
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
-
+.panel-body{
+    padding: 200px;
+    border: 5px solid rgb(218, 226, 231);
+    border-radius: 50px;
+}
 
 
