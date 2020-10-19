@@ -25,6 +25,10 @@
 #### [Heroku](https://carrent1.herokuapp.com/):-Sign up for an account.
 
 #### [Trello](https://trello.com/b/fY9xPmTa/car-sell):
+
+#### [Wireframe](https://www.figma.com/file/EeWaAzqAqQCyrvtXmqADJ1/Untitled?node-id=0%3A1):
+
+#### [ERD]()
 #
 
 #### 
