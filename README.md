@@ -1,4 +1,4 @@
-# Car Sell
+# Car-Sell
 
 #### Car Sell is an app helps reach out to potential buyer connect users around the world allowing to buy their favorite car. 
 #
@@ -22,9 +22,9 @@
 #
 
 ## Getting Started:
-#### [Heroku](https://jfk-findapet.herokuapp.com/)-Sign up for an account.
+#### [Heroku](https://carrent1.herokuapp.com/):-Sign up for an account.
 
-#### [Trello](https://trello.com/b/fY9xPmTa/car-sell)
+#### [Trello](https://trello.com/b/fY9xPmTa/car-sell):
 #
 
 #### 
