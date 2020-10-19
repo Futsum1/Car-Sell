@@ -48,13 +48,11 @@ class App extends Component {
 
   handleUpdateCar = async updatedCrData => {
     const updatedCar = await carAPI.update(updatedCrData);
-    // Using map to replace just the car that was updated
     const newCarsArray = this.state.cars.map(p =>
       p._id === updatedCar._id ? updatedCar : p
     );
     this.setState(
       { cars: newCarsArray },
-      // This cb function runs after state is updated
       () => this.props.history.push("/")
     );
   };
