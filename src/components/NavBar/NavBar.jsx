@@ -7,9 +7,13 @@ const NavBar = (props) => {
     <div>
       <Link to='/'>Car List</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      {props.user.isAdmin && <NavLink exact to="/add">Add Car</NavLink>}
-      
+      {props.user.isAdmin && (
+        <>
+      <NavLink exact to="/add">Add Car</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      </>
+      )}
+      
       <Link to='' onClick={props.handleLogout} className='NavBar-link'>LOG OUT</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>

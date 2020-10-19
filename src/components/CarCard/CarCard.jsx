@@ -19,6 +19,8 @@ function CarCard({car}) {
           <dd>{car.year}</dd>
           <dt>Car Odometere</dt>
           <dd>{car.odometer}</dd>
+          <dt>Car Price</dt>
+          <dd>${car.price}</dd>
           {car.photo && <img alt="car" src={car.photo}/>}
         </dl>
       </div>

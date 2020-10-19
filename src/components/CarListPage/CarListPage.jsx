@@ -9,7 +9,8 @@ function CarListPage(props) {
         {props.cars.map(car => (
          <CarListItem 
          car={car} 
-         key={car._id} 
+         key={car._id}
+         isAdmin={props.user.isAdmin}
          handleDeleteCar={props.handleDeleteCar}
          />
         ))}

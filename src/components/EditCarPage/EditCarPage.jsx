@@ -75,6 +75,15 @@ class EditCarPage extends Component {
            />
          </div>
          <div className="form-group">
+           <label> Car Price </label>
+           <input
+             className="form-control"
+             name="price"
+             value={this.state.formData.price}
+             onChange={this.handleChange}
+           />
+         </div>
+         <div className="form-group">
            <label> photo </label>
            <input
              className="form-control"

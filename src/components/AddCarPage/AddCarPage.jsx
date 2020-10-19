@@ -11,6 +11,7 @@ class AddCarPage extends Component {
      year: '0000',
      odometer: '',
      photo: '',
+     price: '',
      user: this.props.user._id
    }
  };
@@ -95,6 +96,15 @@ class AddCarPage extends Component {
              className="form-control"
              name="photo"
              value={this.state.formData.photo}
+             onChange={this.handleChange}
+           />
+         </div>
+         <div className="form-group">
+           <label> Price </label>
+           <input
+             className="form-control"
+             name="price"
+             value={this.state.formData.price}
              onChange={this.handleChange}
            />
          </div>

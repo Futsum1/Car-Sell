@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     grid-gap: 40px;
-    background: url('https://wallpaperaccess.com/full/110804.jpg')
+    background: url('https://wallpaperaccess.com/full/110804.jpg');
+    padding: 7px;
+    border: 4px solid gray;
   }
   

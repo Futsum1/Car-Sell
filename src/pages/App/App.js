@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
@@ -26,12 +26,6 @@ class App extends Component {
     const cars = await carAPI.getAllCars();
     this.setState({ cars });
   }
-
-  async getUserCars() {
-    const cars = await carAPI.getAllUserCars(this.state.user._id);
-    this.setState({ cars });
-  }
-
 
   handleAddCar = async newCrData => {
     const newCr = await carAPI.create(newCrData);
@@ -70,8 +64,10 @@ class App extends Component {
     this.setState({ user: null, cars: [] });
   }
 
-  handleSignupOrLogin = () => {
-    this.setState({ user: userService.getUser() }, () => this.getUserCars());
+  handleSignupOrLogin = async () => {
+    const user = await userService.getUser()
+    const cars = await carAPI.getAllUserCars(user && user._id);
+    this.setState({ user, cars });
   };
 
   render() {
@@ -80,7 +76,6 @@ class App extends Component {
         <header className="App-header">
           CAR RENT
       <nav>
-
             <NavBar user={this.state.user}
               handleLogout={this.handleLogout}
             />
@@ -103,28 +98,33 @@ class App extends Component {
             <Route
               exact
               path='/'
-              render={() => <CarListPage cars={this.state.cars}
+              render={({history}) => this.state.user ? <CarListPage cars={this.state.cars} user={this.state.user}
                 handleDeleteCar={this.handleDeleteCar}
-              />
+              /> :
+              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+              history={history} />
               } />
             <Route
               exact
               path='/add'
-              render={() => <AddCarPage
+              render={() => this.state.user.isAdmin ? <AddCarPage
                 user={this.state.user}
                 handleAddCar={this.handleAddCar}
-              />
+              /> : <Redirect to='/' />
               } />
             <Route
               exact
               path='/details'
-              render={({ location }) => <CarDetailPage location={location} />
+              render={({ location, history }) => this.state.user ? <CarDetailPage location={location} /> :
+              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+              history={history} />
               } />
             <Route
               exact
               path='/checkout'
-              render={({ location }) => <CheckOut location={location} />
-              } />
+              render={({ location, history}) => this.state.user ? <CheckOut location={location} /> :
+              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+              history={history} /> } />
             <Route
               exact
               path='/success'
@@ -134,10 +134,11 @@ class App extends Component {
               exact
               path="/edit"
               render={({ location }) => (
-                <EditCarPage
-                  handleUpdateCar={this.handleUpdateCar}
-                  location={location}
-                />
+                this.state.user.isAdmin ?
+                  <EditCarPage
+                    handleUpdateCar={this.handleUpdateCar}
+                    location={location}
+                  /> : <Redirect to='/' />
               )}
             />
           </main>
