@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          CAR RENT
+          CAR SELL
       <nav>
             <NavBar user={this.state.user}
               handleLogout={this.handleLogout}
@@ -94,7 +94,7 @@ class App extends Component {
               history={history}
             />
           } />
-          <main>
+          <main className="main-App">
             <Route
               exact
               path='/'

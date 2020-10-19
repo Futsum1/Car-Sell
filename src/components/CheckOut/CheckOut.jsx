@@ -36,7 +36,7 @@ class CheckOut extends Component {
       <>
         <h3>CheckOut</h3>
 
-        <form ref={this.formRef} 
+        <form className="form-group-b" ref={this.formRef} 
        autoComplete="off" 
        onSubmit={this.handleSubmit}>
           <div className="form-group">

@@ -8,21 +8,26 @@ function CarCard({car}) {
         <h3 className='panel-title'>{car.carMake}</h3>
       </div>
       <div className='panel-body'>
-      <ul class="list-group">
-          <li>Car Make</li>
+      {/* <ul class="list-group"> */}
+          <ol>Car Make</ol>
           <dd>{car.carMake}</dd>
-          <li>Car Model</li>
+          <hr></hr>
+          <ol>Car Model</ol>
           <dd>{car.carModel}</dd>
-          <li>Car Color</li>
+          <hr></hr>
+          <ol>Car Color</ol>
           <dd>{car.color}</dd>
-          <li>CarYear</li>
+          <hr></hr>
+          <ol>CarYear</ol>
           <dd>{car.year}</dd>
-          <li>Car Odometere</li>
+          <hr></hr>
+          <ol>Car Odometere</ol>
           <dd>{car.odometer}</dd>
-          <li>Car Price</li>
+          <hr></hr>
+          <ol>Car Price</ol>
           <dd>${car.price}</dd>
           {car.photo && <img alt="car" src={car.photo}/>}
-          </ul>
+          {/* </ul> */}
       </div>
       <div className='panel-footer'>
         <Link to={{pathname: '/checkout', state: {car: car}}}>Buy this car</Link>

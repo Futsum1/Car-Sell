@@ -26,7 +26,7 @@ class EditCarPage extends Component {
    return (
      <>
        <h1>Edit Car</h1>
-       <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+       <form className="form-group-c" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
          <div className="form-group">
            <label>Car Make (required)</label>
            <input

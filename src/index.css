@@ -26,6 +26,7 @@ a {
   padding: 1vmin;
   border-radius: 1vmin;
   text-decoration: none !important;
+  padding-left: 55px;
 }
 
 a:hover {

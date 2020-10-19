@@ -8,12 +8,12 @@ const reviewSchema = new Schema({
   timestamps: true
 });
      
-const  rentSchema = new Schema({
+const  sellSchema = new Schema({
   user: {type: Schema.Types.ObjectId, ref: 'User'},
   car_id: {type: Schema.Types.ObjectId, ref: 'Car'},
-  rent_id: {type: String},
+  sell_id: {type: String},
   reviews: [reviewSchema],
   
 });
 
-module.exports = mongoose.model('Rent', rentSchema);
+module.exports = mongoose.model('Rent', sellSchema);

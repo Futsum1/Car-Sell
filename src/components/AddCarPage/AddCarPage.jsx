@@ -37,7 +37,7 @@ class AddCarPage extends Component {
    return (
      <>
        <h3>Add Car</h3>
-       <form 
+       <form className="form-group-a"
        ref={this.formRef} 
        autoComplete="off" 
        onSubmit={this.handleSubmit}
