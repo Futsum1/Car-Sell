@@ -14,8 +14,12 @@
 #
 
 ## Screenshots:
-## ![Car-List Page](https://i.imgur.com/vKXLFuY.png)
+## ![Car-List Admin Page](https://i.imgur.com/vKXLFuY.png)
 #
+
+## Screenshots:
+### ![Car-List uers Page](https://i.imgur.com/vKXLFuY.png)
+
 
 ## Technologies Used: 
 ### HTML, CSS, Javascript, MERN-Stack: MongoDB/Mongoose, React, Node, AJAX, Bootstrap, Heroku
@@ -28,7 +32,7 @@
 
 #### [Wireframe](https://www.figma.com/file/EeWaAzqAqQCyrvtXmqADJ1/Untitled?node-id=0%3A1):
 
-#### [ERD]()
+#### [ERD](https://app.lucidchart.com/lucidchart/0de465b2-93a2-4ace-a2d8-b2f530fe7d27/edit?beaconFlowId=C2A35232EB74FCC3&page=0_0#?folder_id=home&browser=icon):
 #
 
 #### 
