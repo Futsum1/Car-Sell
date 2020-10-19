@@ -1,10 +1,9 @@
 .CarListItem-action-panel {
     display: flex;
     justify-content: space-around;
-    background-color: green;
     padding-top: 150px;
   }
 
 .btn  {
-  background-color: green;
+  background-color: rgb(122, 125, 122);
 }
