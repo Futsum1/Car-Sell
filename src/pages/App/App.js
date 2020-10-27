@@ -48,7 +48,7 @@ class App extends Component {
 
   handleUpdateCar = async updatedCrData => {
     const updatedCar = await carAPI.update(updatedCrData);
-    const newCarsArray = this.state.cars.map(p =>
+    const newCarsArray = this.state.cars.map(p => 
       p._id === updatedCar._id ? updatedCar : p
     );
     this.setState(
