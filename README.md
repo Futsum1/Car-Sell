@@ -13,11 +13,11 @@
 * Admin have access to add edit/delete and provide all for the user needed
 #
 
-## Screenshots:
+## Admin Main Page:
 ## ![Car-List Admin Page](https://i.imgur.com/vKXLFuY.png)
 #
 
-## Screenshots:
+## Users Main Page:
 ### ![Car-List uers Page](https://i.imgur.com/d0pR5Ba.png)
 
 
