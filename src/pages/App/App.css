@@ -57,8 +57,6 @@ img{
     width: 240px;
     height: 210px;
     padding: px;
-    /* width: 340px;
-    height: 340px; */
 }
 
 .panel-body-a{
@@ -71,12 +69,12 @@ img{
   border-radius: 50px;
 }
 .form-group-a{
-  background-color: rgb(244, 232, 232);
+  background-color: #f1d8d8;
   color-adjust: cream;
   width: 700px;
 }
 .form-group-b{
-  background-color: rgb(244, 232, 232);
+  background-color: #f1d8d8;
   color-adjust: cream;
   width: 700px; 
 }
