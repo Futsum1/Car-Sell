@@ -1,6 +1,6 @@
 # Car-Sell
 
-#### Car Sell is an app helps reach out to potential buyer connect users around the world allowing to buy their favorite car. 
+### Car Sell is an app helps reach out to potential buyer connect users around the world allowing to buy their favorite car. 
 #
 
 ## Features:
