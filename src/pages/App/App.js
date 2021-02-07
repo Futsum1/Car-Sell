@@ -48,7 +48,7 @@ class App extends Component {
 
   handleUpdateCar = async updatedCrData => {
     const updatedCar = await carAPI.update(updatedCrData);
-    const newCarsArray = this.state.cars.map(p => 
+    const newCarsArray = this.state.cars.map(p =>
       p._id === updatedCar._id ? updatedCar : p
     );
     this.setState(
@@ -72,8 +72,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          CAR SELL
-      <nav>
+          <nav>
             <NavBar user={this.state.user}
               handleLogout={this.handleLogout}
             />
@@ -96,11 +95,11 @@ class App extends Component {
             <Route
               exact
               path='/'
-              render={({history}) => this.state.user ? <CarListPage cars={this.state.cars} user={this.state.user}
+              render={({ history }) => this.state.user ? <CarListPage cars={this.state.cars} user={this.state.user}
                 handleDeleteCar={this.handleDeleteCar}
               /> :
-              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
-              history={history} />
+                <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+                  history={history} />
               } />
             <Route
               exact
@@ -114,15 +113,15 @@ class App extends Component {
               exact
               path='/details'
               render={({ location, history }) => this.state.user ? <CarDetailPage location={location} /> :
-              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
-              history={history} />
+                <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+                  history={history} />
               } />
             <Route
               exact
               path='/checkout'
-              render={({ location, history}) => this.state.user ? <CheckOut location={location} /> :
-              <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
-              history={history} /> } />
+              render={({ location, history }) => this.state.user ? <CheckOut location={location} /> :
+                <LoginPage handleSignupOrLogin={this.handleSignupOrLogin}
+                  history={history} />} />
             <Route
               exact
               path='/success'

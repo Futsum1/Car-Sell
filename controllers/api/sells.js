@@ -1,4 +1,4 @@
-const Rent = require('../models/rent');
+const Sell = require('../models/sell');
 // const { render } = require('../server');
 
 module.exports = {
@@ -21,56 +21,56 @@ const BOOK = {
 }
 
 function deleteOrder(req, res) {
-   Rent.findByIdAndDelete(req.params.id, function(err) {
-   res.redirect('/rents');
+   Sell.findByIdAndDelete(req.params.id, function(err) {
+   res.redirect('/sells');
   });
 }
 
 
 function edit(req, res) {
-  Rent.findById(req.params.id, function(err, rent) {
-  res.render('rents/edit', { rent });
+  Sell.findById(req.params.id, function(err, sell) {
+  res.render('Sells/edit', { sell });
  });
 }
 
 function update(req, res) {
-    Rent.findByIdAndUpdate(req.params.id, req.body, function(err, rent) {
+  Sell.findByIdAndUpdate(req.params.id, req.body, function(err, sell) {
     
 
-    rent.save(function(err){
-      res.redirect(`/rents/${req.params.id}`);
+    sell.save(function(err){
+      res.redirect(`/sells/${req.params.id}`);
     })
   });
   
 }
 
 function create(req, res) {
-  const rent = new Rent({
+  const sell = new Sell({
     car: req.body.car,
     price: BOOK[req.body.car],
     
   });
-  rent.user = req.user._id;
+  sell.user = req.user._id;
   
-  rent.save(function(err) {
-      if (err) return res.render('rents/new');
-      res.redirect(`/rents`);
+  sell.save(function(err) {
+      if (err) return res.render('sells/new');
+      res.redirect(`/sells`);
   });
   }
   
 function show(req, res){
-    Rent.findById(req.params.id, function(err, rent){
-    res.render('rents/show',{title: 'Rents Detail',  rent});
+  Sell.findById(req.params.id, function(err, sell){
+    res.render('sells/show',{title: 'Sells Detail',  sell});
 })
 }
 
 function newRent(req, res) {
-  res.render('rents/new');
+  res.render('sells/new');
 }
 
 function index(req, res) {
-    Rent.find({}, function(err, rents) {
-    res.render('rents/index', {rents});
+  Sell.find({}, function(err, sells) {
+    res.render('sells/index', {sells});
   })
 }
 

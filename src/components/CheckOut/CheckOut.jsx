@@ -6,18 +6,21 @@ class CheckOut extends Component {
     invalidForm: true,
     completed: false,
     formData: {
-      buyerName: "",
-      ccNumber: "",
-      expiryDate: "",
-      securityCode: "",
+      buyerName: '',
+      buyerLastName: '',
+      emailAddress: '',
+      ccNumber: '',
+      expiryDate: '',
+      securityCode: '',
     },
   };
+
 
   formRef = React.createRef();
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.setState({completed: true})
+    this.setState({ completed: true })
   };
 
   handleChange = (e) => {
@@ -34,13 +37,13 @@ class CheckOut extends Component {
   render() {
     return (
       <>
-        <h3>CheckOut</h3>
+        <h3 style={{ fontStyle: 'italic' }}>CheckOut</h3>
 
-        <form className="form-group-b" ref={this.formRef} 
-       autoComplete="off" 
-       onSubmit={this.handleSubmit}>
+        <form className="form-group-b" ref={this.formRef}
+          autoComplete="off"
+          onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Name</label>
+            <label>Card Holder Name</label>
             <input
               className="form-control"
               name="buyerName"
@@ -49,8 +52,9 @@ class CheckOut extends Component {
               required
             />
           </div>
+
           <div className="form-group">
-            <label>Credit Card Number</label>
+            <label>Credit / Debit </label>
             <input
               className="form-control"
               name="ccNumber"
@@ -70,7 +74,7 @@ class CheckOut extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Secuirty code</label>
+            <label> CVC </label>
             <input
               className="form-control"
               name="securityCode"
@@ -79,17 +83,20 @@ class CheckOut extends Component {
               value={this.state.formData.securityCode}
             />
           </div>
-          <button
-            type="submit"
-            className="btn"
-            disabled={this.state.invalidForm}
-          >
-            Purchase
+          <div style={{ textAlign: 'center' }}>
+            <button
+              type="submit"
+              className="btn"
+              disabled={this.state.invalidForm}
+              style={{ fontSize: '15px', color: '#007BFF' }}
+            >
+              PURCHASE
           </button>
-          <Link to="/">CANCEL</Link>
+            <Link to="/">CANCEL</Link>
+          </div>
         </form>
 
-        {this.state.completed && <Redirect to={{pathname: '/success', state: {car: this.props.location.state.car}}} />}
+        {this.state.completed && <Redirect to={{ pathname: '/success', state: { car: this.props.location.state.car } }} />}
       </>
     );
   }

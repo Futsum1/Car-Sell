@@ -13,17 +13,12 @@ code {
 }
 
 :root {
-  --black: #07020D;
-  --accent: #5DB7DE;
-  /* --background: #F1E9DB; */
-  /* --secondary: #A39B8B; */
   --secondary-dark: #736b5a;
 }
 
-
 a {
-  /* color: var(--accent); */
-  padding: 1vmin;
+  color: var(--accent);
+  padding: 2vmin;
   border-radius: 1vmin;
   text-decoration: none !important;
   padding-left: 55px;
@@ -56,6 +51,6 @@ dl {
   -ms-user-select: none;
   user-select: none;
 }
-.form-control{
-   color: red;
-}
+
+
+

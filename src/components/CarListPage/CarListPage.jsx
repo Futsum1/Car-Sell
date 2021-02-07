@@ -7,12 +7,12 @@ function CarListPage(props) {
     <>
       <div className="CarListPage-grid">
         {props.cars.map(car => (
-         <CarListItem 
-         car={car} 
-         key={car._id}
-         isAdmin={props.user.isAdmin}
-         handleDeleteCar={props.handleDeleteCar}
-         />
+          <CarListItem
+            car={car}
+            key={car._id}
+            isAdmin={props.user.isAdmin}
+            handleDeleteCar={props.handleDeleteCar}
+          />
         ))}
       </div>
     </>

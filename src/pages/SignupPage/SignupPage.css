@@ -3,6 +3,9 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
+    text-align: center;
+    color: #007BFF;
     margin-bottom: 50px;
     background: url('https://wallpaperaccess.com/full/110804.jpg')
   }

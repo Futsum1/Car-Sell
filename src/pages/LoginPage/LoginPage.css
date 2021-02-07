@@ -1,26 +1,13 @@
-/* .LoginPage {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-  } */
-
-  
-  .LoginPage {
-        font-size: 2.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        display: flex;
-        flex-flow: column nowrap;
-        /* justify-content: center; */
-        align-items: center;
-        padding: 140px;
-        background-color: lavenderblush;
-        background: url('https://wallpaperaccess.com/full/110804.jpg')
+.LoginPage {
+ font-size: 2.125rem;
+ text-anchor: middle;
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: center;
+ align-items: center;
+ padding: 140px;
+ background-color: lavenderblush;
+ background: url('https://wallpaperaccess.com/full/110804.jpg')
 }
 
      

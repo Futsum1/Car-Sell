@@ -4,18 +4,24 @@ import './NavBar.css';
 
 const NavBar = (props) => {
   let navs = props.user ?
-    <div>
-      <Link to='/'>Car List</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <div class='navbar'>
+      <>
+        {/* <a href="/"><button>Car List</button> </a> */}
+        {/* <NavLink exact to="/"><spin>Car-List</spin></NavLink> */}
+        <a href="/"><spin>HOME</spin></a>
+      |&nbsp;&nbsp;&nbsp;
+      </>
       {props.user.isAdmin && (
+
         <>
-      <NavLink exact to="/add">Add Car</NavLink>
+          <a href="/"><spin>CAR LIST</spin></a>
+          <NavLink exact to="/add">ADD CAR</NavLink>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       </>
       )}
-      
+
       <Link to='' onClick={props.handleLogout} className='NavBar-link'>LOG OUT</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      |&nbsp;&nbsp;&nbsp;
       <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
     </div>
     :
@@ -28,8 +34,8 @@ const NavBar = (props) => {
   return (
     <div className='NavBar'>
       {navs}
-      
-  
+
+
     </div>
   );
 };

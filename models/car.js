@@ -4,11 +4,19 @@ var Schema = mongoose.Schema;
 var carSchema = new Schema({
   carMake: {type: String },
   carModel: {type: String },
-  color: {type: String },
+  photo: {type: String},
   year: {type: Number},
   odometer: {type: Number, default: 00000},
-  photo: {type: String},
+  transmission: {type: String},
+  city: {Number},
+  fuel: {Number},
+  door: {type: Number},
+  drive: {type: String},
+  body: {type: String},
+  color: {type: String },
+  daily: {type: Number},
   price: {type: Number},
+
 },{
   timestamps: true
 });

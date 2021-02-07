@@ -4,7 +4,7 @@ import './LoginPage.css';
 import userService from '../../utils/userService';
 
 class LoginPage extends Component {
-  
+
   state = {
     email: '',
     pw: ''
@@ -23,8 +23,8 @@ class LoginPage extends Component {
     try {
       await userService.login(this.state);
       this.props.handleSignupOrLogin();
-      // Successfully signed up - show GamePage
-      this.props.history.push('/');
+      // Successfully signed up - show
+      this.props.history.push("/");
     } catch (err) {
       // Do not alert in your projects,
       // show a modal or some UI instead
@@ -48,9 +48,11 @@ class LoginPage extends Component {
             </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-12 text-center">
-              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+            <div className="col-sm-12 text-center" style={{ fontSize: '15px' }}>
+              <button className="btn btn-default" style={{ color: '#007FBB', fontSize: '15px' }}>
+                Log In
+                </button>&nbsp;&nbsp;&nbsp;
+              <Link to='/CarListItem'>Cancel</Link>
             </div>
           </div>
         </form>

@@ -3,7 +3,7 @@ import CarCard from "../../components/CarCard/CarCard";
 
 
 function CarDetailPage(props) {
-  
+
   const car = props.location.state.car;
   return (
     <>

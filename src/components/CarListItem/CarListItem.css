@@ -1,9 +1,92 @@
+@media screen and (max-width:600px) {
+  .col-sm-4 {
+      margin-bottom: 20px
+  }
+}
 .CarListItem-action-panel {
     display: flex;
     justify-content: space-around;
     padding-top: 150px;
   }
 
-.btn  {
-  background-color: rgb(122, 125, 122);
+  .CarListPage-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-gap: 20px;
+    padding: 7px;
+    border: 3px solid black;
 }
+.btn-block  {
+  height: 25px;
+}
+
+.build{
+  font-size: 12px;
+  font-weight: 300;
+}
+.img-logo-a{
+  width: 60px;
+  height: 60px;
+}
+.img-logo-b{
+  width: 60px;
+  height: 60px;
+  margin-left: 25px ;
+  justify-content: space-between!important;
+  
+}
+.mid {
+  justify-content: space-between!important;
+}
+
+.card {
+  width: 250px;
+  border-radius: 10px
+}
+
+span.text-muted {
+  font-size: 12px
+}
+
+small.text-muted {
+  font-size: 8px
+}
+
+h5.mb-0 {
+  font-size: 1rem
+}
+
+small.ghj {
+  font-size: 9px
+}
+
+.mid {
+  background: #ECEDF1;
+}
+
+h6.ml-1 {
+  font-size: 13px
+}
+
+small.key {
+  text-decoration: underline;
+  font-size: 9px;
+  cursor: pointer
+}
+
+.btn-danger {
+  color: #891d2b;
+  padding: 4px;
+}
+
+.btn-danger:focus {
+  box-shadow: none
+}
+
+small.justify-content-center {
+  font-size: 9px;
+  cursor: pointer;
+  text-decoration: underline
+}
+

@@ -2,16 +2,19 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: 7vmin auto;
+  background: #292E49;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #292E49, #292E49);  
+  background: linear-gradient(to right, #292E49, #292E49); 
 }
-
+  
 .App-header {
-  background-color: var(--black);
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1vmin;
-  font-size: 2.5vmin;
-  color: var(--background);
+  padding: 0vmin;
+  font-size: 2vmin;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
 }
 
 .App main {
@@ -20,8 +23,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  /* list-style-image: 14px solid green; */
-  background-color: gray;
+  background-color: rgb(249, 249, 249);
 }
 
 .App main h1 {
@@ -37,49 +39,53 @@ main{
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSG3P6WiSLNsmjOFxQsP_q0nyxPAuMxzqGpQ&usqp=CAU');
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.panel-body{
-    padding: 100px;
-    border: 2px solid silver;
-    border-radius: 5px;
-    border-radius: 50px;
-    width: 650px;
-    text-align: center;
-    color: lightslategrey;
-    border-image-repeat: 4px;
-}
-img{
-    border: 4px solid black;
-    width: 240px;
-    height: 210px;
-    padding: px;
+
+.panel-footer {
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-align: center;
 }
 
 .panel-body-a{
-  background-color: rgb(223, 234, 244);
-  color-adjust: cream;
-  width: 650px;
   text-align: center;
-  font-weight: 900px;
-  border: 1px solid black;
-  border-radius: 50px;
 }
 .form-group-a{
-  background-color: #f1d8d8;
+  background-color: #edefeb;
   color-adjust: cream;
   width: 700px;
 }
 .form-group-b{
-  background-color: #f1d8d8;
+  background-color: #edefeb;
   color-adjust: cream;
-  width: 700px; 
+  width: 700px;  
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
 }
 .form-group-c{
-  background-color: rgb(244, 232, 232);
-  color-adjust: cream;
-  width: 700px; 
+  background-color:  #edefeb;;
 }
+.panel-body{
+  border: 2px solid silver;
+  border-radius: 5px;
+  border-radius: 50px;
+  width: 650px;
+  text-align: center;
+  color: lightslategrey;
+  border-image-repeat: 4px;
+}
+
+.col {
+  /* flex-grow: 1; */
+  margin-top: 40px;
+  text-align: center;
+  background-color:#F9F9F9;
+  font-style: italic;
+}
+

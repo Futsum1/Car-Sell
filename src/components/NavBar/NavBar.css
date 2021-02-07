@@ -1,23 +1,4 @@
-.NavBar {
-  display: flex;
-  justify-content: center;
-  /* margin: 0 40 20px; */
-  /* background-color: grey; */
-  padding: 5px;
-  
-}
-
-.NavBar-link {
-  margin: 0 10px;
-  
-}
-
-.NavBar-welcome {
-  color:rgb(185, 25, 25);
-
-}
 .App-header{
-  color: rgb(70, 109, 122);
-  margin-top: 0px;
-  background-color: rgb(202, 202, 222);
+  color: rgb(244, 247, 248);
 }
+
