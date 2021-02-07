@@ -4,11 +4,11 @@
 #
 
 ## Features:
-* a price range and filtering content based on a specific feature, color,engine capacity,number of doors, luggage space, etc.
+* A price range and filtering content based on a specific feature, color,engine capacity,number of doors, luggage space, etc.
 
 * Search mannualy by car model type, color, year, odometer, etc to find your favorite car
 
-* users have access to use a debit/credit card to make a payment 
+* Users have access to use a debit/credit card to make a payment 
 
 * Admin have access to add edit/delete and provide all for the user needed
 #
