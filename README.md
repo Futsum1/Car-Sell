@@ -39,7 +39,7 @@
 * ## Next Step:
 * Graphical user interface.
 * Move the car image 360º.
-* Review page.
+* Review page. Rate, Like & Share .
 * Sell/Review ERD.
 
 #
